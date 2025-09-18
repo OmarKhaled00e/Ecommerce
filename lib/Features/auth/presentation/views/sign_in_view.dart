@@ -1,3 +1,4 @@
+import 'package:ecommerce/Features/auth/presentation/views/widgets/sign_In_view_body.dart';
 import 'package:flutter/material.dart';
 
 class SignInView extends StatelessWidget {
@@ -5,6 +6,6 @@ class SignInView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text('Signin view')));
+    return Scaffold(body: SignInViewBody());
   }
 }
