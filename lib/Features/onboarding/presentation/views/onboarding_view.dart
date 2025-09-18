@@ -1,3 +1,4 @@
+import 'package:ecommerce/Features/onboarding/presentation/views/widgets/onboarding_view_body.dart';
 import 'package:flutter/material.dart';
 
 class OnboardingView extends StatelessWidget {
@@ -5,10 +6,6 @@ class OnboardingView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Onboarding view'),
-      ),
-    );
+    return Scaffold(body: OnboardingViewBody());
   }
 }
