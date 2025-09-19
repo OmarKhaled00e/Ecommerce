@@ -1,3 +1,4 @@
+import 'package:ecommerce/Features/main/presentation/views/all_products_view.dart';
 import 'package:ecommerce/Features/main/presentation/views/widgets/category_chips.dart';
 import 'package:ecommerce/Features/main/presentation/views/widgets/custom_search_bar.dart';
 import 'package:ecommerce/Features/main/presentation/views/widgets/product_grid.dart';
@@ -6,8 +7,10 @@ import 'package:ecommerce/core/controllers/theme_controller.dart';
 import 'package:ecommerce/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:get/get.dart';
 import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
+import 'package:get/utils.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -87,7 +90,7 @@ class HomeViewBody extends StatelessWidget {
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () => Get.to(()=> AllProductsView()),
                   child: Text(
                     'See All',
                     style: TextStyle(color: Theme.of(context).primaryColor),

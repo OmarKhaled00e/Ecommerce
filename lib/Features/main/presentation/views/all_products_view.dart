@@ -1,20 +1,28 @@
 import 'package:ecommerce/Features/main/presentation/views/widgets/filter_bottom_sheet.dart';
-import 'package:ecommerce/Features/main/presentation/views/widgets/shopping_view_body.dart';
+import 'package:ecommerce/Features/main/presentation/views/widgets/product_grid.dart';
 import 'package:ecommerce/core/utils/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_core/get_core.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 
-class ShoppingView extends StatelessWidget {
-  const ShoppingView({super.key});
+class AllProductsView extends StatelessWidget {
+  const AllProductsView({super.key});
 
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
-
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       appBar: AppBar(
+        leading: IconButton(
+          onPressed: () => Get.back(),
+          icon: Icon(
+            Icons.arrow_back_ios,
+            color: isDark ? Colors.white : Colors.black,
+          ),
+        ),
         title: Text(
-          'Shopping',
+          'All Products',
           style: Styles.withColor(
             Styles.textH18,
             isDark ? Colors.white : Colors.black,
@@ -42,7 +50,7 @@ class ShoppingView extends StatelessWidget {
 
         ],
       ),
-      body: ShoppingViewBody(),
+      body: ProductGrid(),
     );
   }
 }
