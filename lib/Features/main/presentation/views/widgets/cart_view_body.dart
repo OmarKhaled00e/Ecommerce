@@ -3,7 +3,6 @@ import 'package:ecommerce/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
-import 'package:get/state_manager.dart';
 
 class CartViewBody extends StatelessWidget {
   const CartViewBody({super.key});
