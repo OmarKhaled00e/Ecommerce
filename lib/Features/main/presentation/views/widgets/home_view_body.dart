@@ -1,16 +1,13 @@
 import 'package:ecommerce/Features/main/presentation/views/all_products_view.dart';
+import 'package:ecommerce/Features/main/presentation/views/cart_view.dart';
 import 'package:ecommerce/Features/main/presentation/views/widgets/category_chips.dart';
 import 'package:ecommerce/Features/main/presentation/views/widgets/custom_search_bar.dart';
 import 'package:ecommerce/Features/main/presentation/views/widgets/product_grid.dart';
 import 'package:ecommerce/Features/main/presentation/views/widgets/sale_banner.dart';
 import 'package:ecommerce/core/controllers/theme_controller.dart';
-import 'package:ecommerce/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
-import 'package:get/get_connect/http/src/utils/utils.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
-import 'package:get/utils.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -54,7 +51,7 @@ class HomeViewBody extends StatelessWidget {
                 ),
                 // cart button
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () => Get.to(()=> CartView()),
                   icon: Icon(Icons.shopping_bag_outlined),
                 ),
                 // them button

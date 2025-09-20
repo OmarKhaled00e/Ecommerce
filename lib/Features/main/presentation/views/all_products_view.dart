@@ -1,9 +1,8 @@
+import 'package:ecommerce/Features/main/presentation/views/widgets/custom_arrow.dart';
 import 'package:ecommerce/Features/main/presentation/views/widgets/filter_bottom_sheet.dart';
 import 'package:ecommerce/Features/main/presentation/views/widgets/product_grid.dart';
 import 'package:ecommerce/core/utils/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_core/get_core.dart';
-import 'package:get/get_navigation/src/extension_navigation.dart';
 
 class AllProductsView extends StatelessWidget {
   const AllProductsView({super.key});
@@ -14,13 +13,7 @@ class AllProductsView extends StatelessWidget {
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       appBar: AppBar(
-        leading: IconButton(
-          onPressed: () => Get.back(),
-          icon: Icon(
-            Icons.arrow_back_ios,
-            color: isDark ? Colors.white : Colors.black,
-          ),
-        ),
+        leading: CustomArrow(isDark: isDark),
         title: Text(
           'All Products',
           style: Styles.withColor(

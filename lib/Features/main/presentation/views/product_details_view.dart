@@ -1,4 +1,5 @@
 import 'package:ecommerce/Features/main/data/models/product_model.dart';
+import 'package:ecommerce/Features/main/presentation/views/widgets/custom_arrow.dart';
 import 'package:ecommerce/Features/main/presentation/views/widgets/product_details_view_body.dart';
 import 'package:ecommerce/core/utils/styles.dart';
 import 'package:flutter/material.dart';
@@ -16,13 +17,7 @@ class ProductDetailsView extends StatelessWidget {
     final isDark = Theme.of(context).brightness == Brightness.dark;
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          onPressed: () => Navigator.pop(context),
-          icon: Icon(
-            Icons.arrow_back,
-            color: isDark ? Colors.white : Colors.black,
-          ),
-        ),
+        leading: CustomArrow(isDark: isDark),
         actions: [
           // share button
           IconButton(
