@@ -1,5 +1,6 @@
 import 'package:ecommerce/Features/main/presentation/views/all_products_view.dart';
 import 'package:ecommerce/Features/main/presentation/views/cart_view.dart';
+import 'package:ecommerce/Features/main/presentation/views/notification_view.dart';
 import 'package:ecommerce/Features/main/presentation/views/widgets/category_chips.dart';
 import 'package:ecommerce/Features/main/presentation/views/widgets/custom_search_bar.dart';
 import 'package:ecommerce/Features/main/presentation/views/widgets/product_grid.dart';
@@ -46,7 +47,7 @@ class HomeViewBody extends StatelessWidget {
                 Spacer(),
                 //notification icon
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () => Get.to(()=> NotificationView()),
                   icon: Icon(Icons.notifications_outlined),
                 ),
                 // cart button

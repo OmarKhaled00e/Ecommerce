@@ -1,4 +1,5 @@
 import 'package:ecommerce/Features/auth/presentation/views/sign_in_view.dart';
+import 'package:ecommerce/Features/main/presentation/views/my_orders_view.dart';
 import 'package:ecommerce/core/controllers/auth_controller.dart';
 import 'package:ecommerce/core/utils/styles.dart';
 import 'package:flutter/material.dart';
@@ -62,7 +63,7 @@ class _BuildMenuSectionState extends State<BuildMenuSection> {
                 if (item['title'] == 'Logout') {
                   _showLogoutDialog(context);
                 } else if (item['title'] == 'My Orders') {
-                  // navigation to my orders screen
+                  Get.to(() => MyOrdersView());
                 } else if (item['title'] == 'Shipping Address') {
                   // navigation to Shopping address screen
                 } else if (item['title'] == 'Help Center') {
