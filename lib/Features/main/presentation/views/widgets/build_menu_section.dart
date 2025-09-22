@@ -1,5 +1,7 @@
 import 'package:ecommerce/Features/auth/presentation/views/sign_in_view.dart';
+import 'package:ecommerce/Features/main/presentation/views/help_center_view.dart';
 import 'package:ecommerce/Features/main/presentation/views/my_orders_view.dart';
+import 'package:ecommerce/Features/main/presentation/views/shipping_address_view.dart';
 import 'package:ecommerce/core/controllers/auth_controller.dart';
 import 'package:ecommerce/core/utils/styles.dart';
 import 'package:flutter/material.dart';
@@ -65,9 +67,9 @@ class _BuildMenuSectionState extends State<BuildMenuSection> {
                 } else if (item['title'] == 'My Orders') {
                   Get.to(() => MyOrdersView());
                 } else if (item['title'] == 'Shipping Address') {
-                  // navigation to Shopping address screen
+                  Get.to(() => ShippingAddressView());
                 } else if (item['title'] == 'Help Center') {
-                  // navigation to help center screen
+                  Get.to(() => HelpCenterView());
                 }
               },
             ),
